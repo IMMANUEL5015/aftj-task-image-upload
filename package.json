@@ -1,0 +1,33 @@
+{
+  "name": "aftj-task-image-upload",
+  "version": "1.0.0",
+  "description": "This project is an api that allows an image file to be uploaded.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMMANUEL5015/aftj-task-image-upload.git"
+  },
+  "keywords": [
+    "API",
+    "Image",
+    "Upload",
+    "Backend"
+  ],
+  "author": "Immanuel Diai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IMMANUEL5015/aftj-task-image-upload/issues"
+  },
+  "homepage": "https://github.com/IMMANUEL5015/aftj-task-image-upload#readme",
+  "dependencies": {
+    "cloudinary": "^1.23.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}
