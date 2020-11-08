@@ -42,6 +42,20 @@ app.get('/', (req, res) => {
     });
 });
 
+app.post('/upload-image', uploadImage, async (req, res, next) => {
+    try {
+        if (!req.file) return next(new AppError('You need to upload an image file!', 400));
+
+        const result = await cloudinary.v2.uploader.upload(req.file.path);
+        return res.status(200).json({
+            status: 'success',
+            url: result.secure_url
+        });
+    } catch (error) {
+        next(error);
+    }
+});
+
 app.all('*', (req, res) => {
     res.status(404).json({
         status: 'error',
