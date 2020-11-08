@@ -4,6 +4,7 @@ const cloudinary = require('cloudinary');
 const multer = require('multer');
 const AppError = require('./appError');
 const globalErrorHandler = require('./globalErrorHandler');
+const cors = require('cors');
 
 const app = express();
 
@@ -34,6 +35,11 @@ const upload = multer({
 });
 
 const uploadImage = upload.single('image');
+
+app.use(cors());
+app.options('*', cors());
+
+app.enable('trust proxy');
 
 app.get('/', (req, res) => {
     res.status(200).json({
