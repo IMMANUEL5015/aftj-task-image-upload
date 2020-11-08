@@ -4,7 +4,7 @@ const globalErrorHandler = (err, req, res, next) => {
 
     res.status(err.statusCode).json({
         status: err.status,
-        message: err.message
+        message: err.isOperational ? err.message : 'Something has gone very wrong!'
     });
 }
 
