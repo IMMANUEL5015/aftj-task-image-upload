@@ -19,14 +19,14 @@ const multerStorage = multer.diskStorage({
 
 app.get('/', (req, res) => {
     res.status(200).json({
-        status: 'Success',
+        status: 'success',
         message: 'Your API is running smoothly.'
     });
 });
 
 app.all('*', (req, res) => {
     res.status(404).json({
-        status: 'Fail',
+        status: 'error',
         message: 'The resource you are looking for cannot be found!'
     });
 });
