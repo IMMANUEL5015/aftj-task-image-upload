@@ -13,6 +13,7 @@ the upload fails, the endpoint will respond with an appropriate error message.
 * Express - Node.js Framework
 * Cloudinary - Service to Host the Image Files
 * Heroku - Server for the Deployed Aplication
+* POSTMAN - Endpoint Testing
 
 ## Sample Request and Response for Successful Image Upload
 * Request:
